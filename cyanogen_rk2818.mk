@@ -4,9 +4,6 @@ $(call inherit-product, device/rockchip/rk2818/full_rk2818.mk)
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common.mk)
 
-# Include GSM stuff
-$(call inherit-product, vendor/cyanogen/products/gsm.mk)
-
 # Include extra dictionaries for LatinIME
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/dictionaries
 
