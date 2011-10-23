@@ -325,6 +325,9 @@ on boot
     chown system system /sys/class/backlight/rk28_bl/brightness
     chmod 0660 /sys/class/backlight/rk28_bl/brightness
 
+    write /sys/class/touchpanel/touchcalibration tp_irq
+    write /sys/class/touchpanel/touchcalibration tp_cal
+
 # Include extra init file
     import /system/etc/init.local.rc
 
