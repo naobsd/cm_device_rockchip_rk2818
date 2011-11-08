@@ -9,13 +9,18 @@ $(call inherit-product-if-exists, vendor/rockchip/rk2818/device-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/rockchip/rk2818/overlay
 
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk2818/init.rc:root/init.rc
+    device/rockchip/rk2818/init.rc:root/init.rc \
+    device/rockchip/rk2818/init.rk28board.rc:root/init.rk28board.rc \
+    device/rockchip/rk2818/ueventd.rk28board.rc:root/ueventd.rk28board.rc
 
 PRODUCT_COPY_FILES += \
     device/rockchip/rk2818/init.d/10pointercal:system/etc/init.d/10pointercal \
     device/rockchip/rk2818/etc/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/rockchip/rk2818/etc/vold.fstab:system/etc/vold.fstab \
     device/rockchip/rk2818/etc/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    device/rockchip/rk2818/modules/pl2303.ko:system/lib/modules/pl2303.ko
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
@@ -29,7 +34,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     Gallery \
-    TSCalibration
+    TSCalibration \
+    gps.default
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_rk2818
