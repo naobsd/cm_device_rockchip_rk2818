@@ -2,3 +2,14 @@ on boot
     write /sys/bus/platform/drivers/dwc_otg/force_usb_mode 1
 
     insmod /system/lib/modules/pl2303.ko
+
+    insmod /system/lib/modules/rfkill.ko
+
+    insmod /system/lib/modules/bluetooth.ko
+    insmod /system/lib/modules/l2cap.ko
+    insmod /system/lib/modules/bnep.ko
+    insmod /system/lib/modules/hidp.ko
+    insmod /system/lib/modules/rfcomm.ko
+    insmod /system/lib/modules/sco.ko
+
+    insmod /system/lib/modules/hci_usb.ko

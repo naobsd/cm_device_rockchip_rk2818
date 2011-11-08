@@ -20,7 +20,15 @@ PRODUCT_COPY_FILES += \
     device/rockchip/rk2818/etc/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk2818/modules/pl2303.ko:system/lib/modules/pl2303.ko
+    device/rockchip/rk2818/modules/bluetooth.ko:system/lib/modules/bluetooth.ko \
+    device/rockchip/rk2818/modules/bnep.ko:system/lib/modules/bnep.ko \
+    device/rockchip/rk2818/modules/hci_usb.ko:system/lib/modules/hci_usb.ko \
+    device/rockchip/rk2818/modules/hidp.ko:system/lib/modules/hidp.ko \
+    device/rockchip/rk2818/modules/l2cap.ko:system/lib/modules/l2cap.ko \
+    device/rockchip/rk2818/modules/pl2303.ko:system/lib/modules/pl2303.ko \
+    device/rockchip/rk2818/modules/rfcomm.ko:system/lib/modules/rfcomm.ko \
+    device/rockchip/rk2818/modules/rfkill.ko:system/lib/modules/rfkill.ko \
+    device/rockchip/rk2818/modules/sco.ko:system/lib/modules/sco.ko
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
