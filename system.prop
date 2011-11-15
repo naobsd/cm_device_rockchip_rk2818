@@ -3,6 +3,7 @@
 #
 dalvik.vm.dexopt-flags=m=y
 dalvik.vm.heapsize=32m
+media.stagefright.enable-record=false
 persist.sys.use_dithering=0
 persist.sys.use_16bpp_alpha=1
 qemu.sf.lcd_density=160
